@@ -12,6 +12,7 @@
     <% @pins.each do |pin| %>
       <tr>
         <% if pin.user == current_user%>
+        <td><%= image_tag pin.image.url(:medium) %></td>
         <td><%= pin.description %></td>
         <td><%= link_to 'Show', pin %></td>
         <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
